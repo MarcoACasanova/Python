@@ -1,6 +1,8 @@
-def factorial_function(n):
-    if n < 0:
-        return None
-    if n < 2:
+def fatorial(n):
+    if n == 0:
         return 1
-    return n * factorial_function(n - 1)
+    else:
+        return n * fatorial(n-1)
+
+fato = int(input('Digite o número: '))
+print(fatorial(fato))
