@@ -1,3 +1,7 @@
-lst = [i for i in range(-1, -2)]
-
-print(lst)
+for ch in "$#@123XYX":
+    if ch.isupper():
+        print(ch.lower(), end='')
+    elif ch.islower():
+        print(ch.upper(), end='')
+    else:
+        print(ch, end='')
