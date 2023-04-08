@@ -1,7 +1,12 @@
-for ch in "$#@123XYX":
-    if ch.isupper():
-        print(ch.lower(), end='')
-    elif ch.islower():
-        print(ch.upper(), end='')
-    else:
-        print(ch, end='')
+print(3 * 'abc' + 'xyz')
+
+print('Mike' > 'Mikey')
+
+print(chr(ord('z') -2))
+
+print(ord('c') - ord('a'))
+
+x = '\''
+print(len(x))
+
+print(float('1, 3'))
