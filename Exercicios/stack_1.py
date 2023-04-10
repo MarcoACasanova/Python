@@ -19,20 +19,16 @@ class Stack:
 
 class CountingStack(Stack):
     def __init__(self):
-    #
-    # Fill the constructor with appropriate actions.
-    #
+        super().__init__()
+        self.__pop_count = 0
 
     def get_counter(self):
-    #
-    # Present the counter's current value to the world.
-    #
-
+        return self.__pop_count  
+        
     def pop(self):
-    #
-    # Do pop and update the counter.
-    #
-	
+        val -= super().pop()
+        self.__pop_count += 1
+        return val
 
 stk = CountingStack()
 for i in range(100):
