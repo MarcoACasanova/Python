@@ -15,28 +15,20 @@ defina uma nova exceção chamada QueueError (escolha uma exceção para derivá
 Complete o código que fornecemos no editor. Execute-o para verificar se o seu output é semelhante ao nosso.
 '''
 
-class QueueError(???):  # Choose base class for the new exception.
-    #
-    #  Write code here
-    #
-
+class QueueError(IndexError):
+    pass
 
 class Queue:
     def __init__(self):
-        #
-        # Write code here
-        #
+        self.__queue = []
 
     def put(self, elem):
-        #
-        # Write code here
-        #
+        self.__queue.insert(0, elem)
 
     def get(self):
-        #
-        # Write code here
-        #
-
+        if len(self.__queue) == 0:
+            raise QueueError("Queue is empty")
+        return self.__queue.pop()
 
 que = Queue()
 que.put(1)
@@ -45,5 +37,6 @@ que.put(False)
 try:
     for i in range(4):
         print(que.get())
-except:
+except QueueError:
     print("Queue error")
+

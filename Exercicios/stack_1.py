@@ -19,16 +19,17 @@ class Stack:
 
 class CountingStack(Stack):
     def __init__(self):
-        super().__init__()
+        Stack.__init__(self)
         self.__pop_count = 0
 
     def get_counter(self):
         return self.__pop_count  
         
     def pop(self):
-        val -= super().pop()
+        val = Stack.pop(self)
         self.__pop_count += 1
         return val
+
 
 stk = CountingStack()
 for i in range(100):

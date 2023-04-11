@@ -6,21 +6,26 @@ Complete o código que fornecemos no editor. Execute-o para verificar se ele pro
 Abaixo pode copiar o código que utilizámos no laboratório anterior:
 '''
 
-class QueueError(???):
+class QueueError(IndexError):
     pass
 
-
 class Queue:
-    #
-    # Code from the previous lab.
-    #
+    def __init__(self):
+        self.__queue = []
 
+    def put(self, elem):
+        self.__queue.insert(0, elem)
+
+    def get(self):
+        if len(self.__queue) == 0:
+            raise QueueError("Queue is empty")
+        return self.__queue.pop()
+
+    def isempty(self):
+        return len(self.__queue) == 0
 
 class SuperQueue(Queue):
-    #
-    # Write new code here.
-    #
-
+    pass
 
 que = SuperQueue()
 que.put(1)
