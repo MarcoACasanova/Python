@@ -1,12 +1,8 @@
-print(3 * 'abc' + 'xyz')
+class Star:
+    def __init__(self, name, galaxy):
+        self.name = name
+        self.galaxy = galaxy
 
-print('Mike' > 'Mikey')
 
-print(chr(ord('z') -2))
-
-print(ord('c') - ord('a'))
-
-x = '\''
-print(len(x))
-
-print(float('1, 3'))
+sun = Star("Sun", "Milky Way")
+print(sun)
