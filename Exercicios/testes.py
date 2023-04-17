@@ -1,8 +1,11 @@
-class Star:
-    def __init__(self, name, galaxy):
-        self.name = name
-        self.galaxy = galaxy
+class A:
+    X = 0
+    def __init__(self, v = 0):
+        self.y = v
+        A.X += v
 
+a = A()
+b = A(1)
+c = A(2)
 
-sun = Star("Sun", "Milky Way")
-print(sun)
+print(c.X)
