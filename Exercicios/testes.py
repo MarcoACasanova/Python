@@ -1,11 +1,8 @@
 class A:
-    X = 0
-    def __init__(self, v = 0):
-        self.y = v
-        A.X += v
+    pass
+class B:
+    pass
+class C(A, B):
+    pass
 
-a = A()
-b = A(1)
-c = A(2)
-
-print(c.X)
+print(issubclass(C,A)and issubclass(C, B))
